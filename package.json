@@ -1,0 +1,19 @@
+{
+  "name": "pokersorter-ctg",
+  "version": "1.0.0",
+  "description": "poker sorter routine",
+  "main": "sorter.js",
+  "scripts": {
+    "test": "sorter"
+  },
+  "repository": {
+    "type": "git",
+    "url": "pokersorter-ctg"
+  },
+  "author": "ctg",
+  "license": "ISC",
+  "dependencies": {
+    "file-system": "^2.2.2",
+    "lodash": "^4.17.4"
+  }
+}
