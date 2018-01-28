@@ -70,7 +70,6 @@ function createhand(cards1) {
 }
 
 function isRoyalFlush(newHand) {
-  //var newHand = createhand(cards1);
   if (isFlushes(newHand) && (newHand[0].rank + newHand[1].rank + newHand[2].rank + newHand[3].rank + newHand[4].rank) == 55) {
     highestCard = 13;
     return true;
@@ -80,7 +79,6 @@ function isRoyalFlush(newHand) {
 }
 
 function isStraight(newHand) {
-  //var newHand = createhand(cards1);
   var highestCard = newHand[4].rank;
   for (i = 0; i < 4; i++) {
     var diff = newHand[i].rank - newHand[i + 1].rank;
@@ -92,12 +90,10 @@ function isStraight(newHand) {
 }
 
 function HighCardValue(newHand) {
-  //var newHand = createhand(cards1);
   highestCard = newHand[4].rank;
 }
 
 function isFlushes(newHand) {
-  //var newHand = createhand(cards1);
   highestCard = newHand[4].rank;
   var suits = _.map(newHand, 'suit');
   return _.uniq(suits).length === 1;
@@ -161,9 +157,7 @@ function PairThreeFours(newHand) {
   pairs = 0;
   fours = 0;
   threes = 0;
-  //var newHand = createhand(cards1);
   compare.fill(0);
-  //console.log(newHand);
   for (var i = 0; i < 5; i++) {
     compare[newHand[i].rank - 1 % 13]++;
   }
@@ -181,6 +175,5 @@ function PairThreeFours(newHand) {
   });
 
 }
-
 
 module.exports.PokerHand = PokerHand;
